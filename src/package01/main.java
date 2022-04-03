@@ -30,13 +30,10 @@ public class main {
         Scanner scan = new Scanner(System.in);
         List<User> userList = new ArrayList<>();
 
-        System.out.println("Kac adet kayit girilecek : ");
-        int kayitAdedi = scan.nextInt();
-
         Registration userReg = new Registration();
-        userList = userReg.register(kayitAdedi);
+        userList = userReg.register();
 
-        System.out.print("Her dakikanın ilk 10 sn.sinde kayıt olanlar: ");
+
         userReg.printHappyUsers(userList);
     }
 
